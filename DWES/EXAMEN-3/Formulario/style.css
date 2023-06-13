@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+h1,h2 {
+    text-align: left;
+}
+
+form {
+    background-color: #ad6969;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: left;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+input[type="number"],
+select,
+textarea {
+    width: 90%;
+    padding: 5px;
+    font-size: 12px;
+}
+
+input[type="number"]#dia {
+    width: 60px;
+}
+
+select{
+    width: 100px;
+}
+
+input[type="number"]#año {
+    width: 120px;
+}
+
+input[type="submit"] {
+    background-color: #00b37d;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #00dfae;
+}
