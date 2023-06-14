@@ -1,0 +1,21 @@
+Comandos de Video P3::
+
+1. ¿Cuánto dura el video y cuántos flujos de audio y video tiene?
+
+	ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 -select_streams v -show_entries stream=codec_name -of default=noprint_wrappers=1:nokey=1 video.mp4
+
+2. Codifícalo en webm
+
+	ffmpeg -i video.mp4 -c:v libvpx-vp9 -c:a libvorbis video_WEBM.webm
+
+3. Extrae sólo el audio del video
+
+	ffmpeg -i video.mp4 -vn -acodec copy video_MP3.mp3
+
+4. Recorta la duración del video a la mitad
+
+	ffmpeg -i video.mp4 -c copy -t 7 video_CUT.avi
+
+5. Cambia la resolución de imagen del video
+
+	ffmpeg -i video.mp4 -vf "scale=1280x720" -c:a copy video_Resolution.avi

@@ -1,0 +1,26 @@
+Comandos de Imagen P1:
+
+1. Guárdala en formato webp.
+
+	ffmpeg -i photoEjemplo.jpg photoEjemplo.webp
+
+2. Guárdala en jpeg pero al 25% de calidad.
+
+	ffmpeg -i photoEjemplo.jpg -quality 25 photoEjemplo_25Quality.jpg
+
+3. Recorta la imagen, 500 px por arriba y 500 px por la derecha.
+
+	ffmpeg -i photoEjemplo.jpg -vf "crop=in_w-500:in_h-500" photoEjemplo_Cut.jpg
+
+4. Rota la imagen 45% a la derecha.
+
+	ffmpeg -i photoEjemplo.jpg -vf "rotate=0.45*PI/2" photoEjemplo_Rotate.jpg
+
+5. Añade una marca de agua (arriba a la izquierda) que diga "Foto Examen".
+
+	ffmpeg -i photoEjemplo.jpg -vf "drawtext=text='Foto Examen':fontsize=100:fontcolor=black:x=10:y=10" photoEjemplo_WaterMark.jpg
+
+
+6. Transforma la imagen con el filtro "implode".
+
+	ffmpeg -i photoEjemplo.jpg -vf "implode=1" photoEjemplo_implode.jpg
